@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Video Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #165db7;
+        }
+        p {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Facebook Video Downloader</h2>
+        <p>Paste the Facebook video URL below:</p>
+        <input type="text" id="videoUrl" placeholder="https://www.facebook.com/...">
+        <br>
+        <button onclick="downloadVideo()">Download Video</button>
+        <p><em>Note: This redirects to a third-party service. Use at your own risk.</em></p>
+    </div>
+
+    <script>
+        function downloadVideo() {
+            const url = document.getElementById('videoUrl').value.trim();
+            if (!url) {
+                alert('Please enter a valid Facebook video URL.');
+                return;
+            }
+            // Redirect to a hypothetical third-party downloader service
+            // Replace with a real service URL if available (e.g., fdown.net, snapdown.io)
+            const downloaderService = 'https://fdown.net/download.php?url=' + encodeURIComponent(url);
+            window.open(downloaderService, '_blank');
+        }
+    </script>
+</body>
+</html>
